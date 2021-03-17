@@ -3,6 +3,7 @@ package com.company.demo.model;
 import java.util.Optional;
 
 import org.thymeleaf.util.StringUtils;
+// import com.company.demo.model.Todo;
 
 public class TodoValidator {
     /**

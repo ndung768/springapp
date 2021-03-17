@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import com.company.demo.model.TodoService;
+import com.company.demo.service.TodoService;
+import com.company.demo.model.Todo;
 
 @Controller
 public class TodoController {

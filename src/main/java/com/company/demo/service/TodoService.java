@@ -9,6 +9,7 @@ import java.util.Optional;
 
 import com.company.demo.model.TodoValidator;
 import com.company.demo.repository.TodoReponsitory;
+import com.company.demo.model.Todo;
 
 @Service 
 public class TodoService {
