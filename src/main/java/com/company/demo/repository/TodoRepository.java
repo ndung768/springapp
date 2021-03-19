@@ -7,7 +7,6 @@ import org.springframework.stereotype.Repository;
 import com.company.demo.model.Todo;
 
 @Repository
-public interface TodoReponsitory extends JpaRepository<Todo, Long>{
-
-    
+public interface TodoRepository extends JpaRepository<Todo, Long>{
+    Todo findByTitle(String title);
 }

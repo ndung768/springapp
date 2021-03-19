@@ -33,6 +33,7 @@ public class User {
     private int status;
 
     // Nếu không đánh dấu @Column thì sẽ mapping tự động theo tên biến
+    @Column(name = "address")
     private String address;
 
 }

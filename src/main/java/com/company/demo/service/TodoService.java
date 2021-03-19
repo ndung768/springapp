@@ -6,16 +6,17 @@ import org.springframework.stereotype.Service;
 import org.springframework.data.domain.PageRequest;
 
 import java.util.Optional;
+import java.util.List;
 
 import com.company.demo.model.TodoValidator;
-import com.company.demo.repository.TodoReponsitory;
 import com.company.demo.model.Todo;
+import com.company.demo.repository.TodoRepository;
 
 @Service 
 public class TodoService {
 
     @Autowired
-    private TodoReponsitory todoReponsitory;
+    private TodoRepository todoRepository;
 
     @Autowired
     private TodoValidator validator;
@@ -30,8 +31,8 @@ public class TodoService {
 
      public List<Todo> findAll(Integer limit) {
          return Optional.ofNullable(limit)
-                        .map(value -> todoReponsitory.findAll(PageRequest.of(0, value).getContent()))
-                        .orElseGet(() -> todoReponsitory.findAll());
+                        .map(value -> todoRepository.findAll(PageRequest.of(0, value)).getContent())
+                        .orElseGet(() -> todoRepository.findAll());
      }
 
      /**
@@ -42,7 +43,7 @@ public class TodoService {
 
      public Todo add(Todo todo){
          if(validator.isValid(todo)){
-             return todoReponsitory.save(todo);
+             return todoRepository.save(todo);
          }
          return null;
      }

@@ -1,8 +1,11 @@
 package com.company.demo.config;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import com.company.demo.model.TodoValidator;
 
-@configuration
+
+@Configuration
 public class TodoConfig {
 
     /**
